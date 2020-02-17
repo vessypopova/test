@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <!-- saved from url=(0136)https://portal.uclan.ac.uk/bbcswebdav/pid-3226681-dt-content-rid-4054839_1/courses/TE2801_201819_B_CY/animation-demo-back-and-forth.html -->
 <html>
@@ -55,4 +56,63 @@
 
 
 
+=======
+<!doctype html>
+<!-- saved from url=(0136)https://portal.uclan.ac.uk/bbcswebdav/pid-3226681-dt-content-rid-4054839_1/courses/TE2801_201819_B_CY/animation-demo-back-and-forth.html -->
+<html>
+	<head><meta charset="utf-8">
+		
+<title>Learning the basics of canvas</title>
+		<style>
+		h3 {font-family: roboto;</style>
+   <script type="text/javascript" >
+	   
+        /*
+         *  Example moving box animation
+         */
+
+        var tag;
+        var pen;
+        var x = 2;
+        var velocity = 1;
+
+        function start() {
+
+            // Connect to the canvas
+            tag = document.getElementById("maincanvas");
+            pen = tag.getContext("2d");
+
+            // Set a timer which will run drawbox() every 20 milliseconds
+            setInterval("drawbox()", 5);
+        }
+
+        function drawbox() {
+
+            // Wipe the background
+            pen.fillStyle = "#eeeeee";
+            pen.fillRect(0, 0, 800, 600);
+
+            // Draw a box
+            pen.fillStyle = "purple";
+            pen.fillRect(x, 30, 50, 140);
+
+            x = x + velocity;
+
+            // Handle back and forth
+            if (x > 400-50 || x < 0) {
+                velocity *= -1;
+            }
+
+        }
+
+    </script>
+  </head>
+  <body onload="start();">
+    <h3>Canvas demonstration back & forth</h3>
+    <canvas id="maincanvas" width="400" height="200"></canvas>
+  
+
+
+
+>>>>>>> 7764bad7d1a9f765c8fe5b833f3ae97dbbcad819
 </body></html>
